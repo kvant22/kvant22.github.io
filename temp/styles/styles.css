@@ -71,6 +71,12 @@ button:focus {
 .under {
   font-size: 26px;
 }
+.h2-red {
+  color: #ff4747;
+}
+.h2-blue {
+  color: rgb(71, 160, 255);
+}
 
 .under:hover {
   text-decoration: underline;
@@ -135,8 +141,11 @@ button:focus {
 }
 
 .header .navbar {
-  padding-top: 30px;
-  margin-bottom: 200px;
+  position: absolute;
+  left: 200px;
+  /* padding-top: 80px; */
+  /* margin-bottom: 200px; */
+  /* margin-left: 260px; */
 }
 
 @media screen and (max-width: 450px) {
@@ -156,14 +165,11 @@ button:focus {
   /* height: 100px; */
 }
 
-.header .navbar-brand img {
+.navbar-brand img {
   position: absolute;
-  top: 0;
-  left: 150px;
   width: 350px;
-  z-index: 2;
+  z-index: 3;
 }
-
 .header .nav li a {
   font-size: 15px;
   color: #fff;
@@ -256,7 +262,8 @@ button:focus {
   border-radius: 30px;
   font-size: 16px;
   display: inline-block;
-  background-color: #00aafe;
+  /* background-color: #00aafe; */
+  background-color: #47a0ff;
   color: #fff;
   -webkit-box-shadow: 2.5px 4.33px 10px 0px rgba(0, 0, 0, 0.13);
   box-shadow: 2.5px 4.33px 10px 0px rgba(0, 0, 0, 0.13);
@@ -469,7 +476,8 @@ button:focus {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(5, 180, 249, 0.9);
+  /* background-color: rgba(5, 180, 249, 0.9); */
+  background-color: rgba(71, 160, 255, 0.9);
   z-index: -1;
 }
 
@@ -545,7 +553,8 @@ button:focus {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(5, 180, 249, 0.9);
+  /* background-color: rgba(5, 180, 249, 0.9); */
+  background-color: rgba(71, 160, 255, 0.9);
   z-index: -1;
 }
 
@@ -628,7 +637,8 @@ button:focus {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(5, 180, 249, 0.9);
+  /* background-color: rgba(5, 180, 249, 0.9); */
+  background-color: rgba(71, 160, 255, 0.9);
   z-index: -1;
 }
 
@@ -802,7 +812,8 @@ button:focus {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(5, 180, 249, 0.9);
+  /* background-color: rgba(5, 180, 249, 0.9); */
+  background-color: rgba(71, 160, 255, 0.9);
   z-index: -1;
 }
 
@@ -945,7 +956,8 @@ button:focus {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(5, 180, 249, 0.9);
+  /* background-color: rgba(5, 180, 249, 0.9); */
+  background-color: rgba(71, 160, 255, 0.9);
   z-index: -1;
 }
 
@@ -1011,6 +1023,12 @@ button:focus {
   }
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer--bg {
   /* -webkit-clip-path: polygon(0 17%, 100% 0%, 100% 100%, 0 100%);
   clip-path: polygon(0 17%, 100% 0%, 100% 100%, 0 100%); */
@@ -1023,12 +1041,23 @@ button:focus {
   .footer--bg {
     height: auto;
   }
+
+  .navbar-brand img {
+    left: 160px;
+    bottom: 190px;
+  }
 }
 
 @media screen and (max-width: 991px) {
   .footer--bg {
     -webkit-clip-path: polygon(0 9%, 100% 0%, 100% 100%, 0 100%);
     clip-path: polygon(0 9%, 100% 0%, 100% 100%, 0 100%);
+  }
+
+  .navbar-brand img {
+    left: 60px;
+    bottom: 190px;
+    width: 280px;
   }
 }
 
