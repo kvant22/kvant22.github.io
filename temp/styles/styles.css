@@ -120,9 +120,9 @@ button:focus {
 .header--bg {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
-  background: url("../../assets/images/bg-stickers.jpeg") no-repeat;
+  background: url("../../assets/images/bg-arch.jfif") no-repeat;
   /* background: url("../../assets/images/header-background.png") no-repeat; */
-  height: 600px;
+  height: 800px;
   position: relative;
   background-size: cover;
 }
@@ -172,7 +172,7 @@ button:focus {
 }
 .header .nav li a {
   font-size: 15px;
-  color: #fff;
+  color: #181818;
 }
 
 .header__content__title {
@@ -197,7 +197,8 @@ button:focus {
 .header .navbar .navbar-brand,
 .header .navbar .navbar-nav > li > a:focus {
   background-color: transparent;
-  color: #fff;
+  color: #181818;
+  font-size: 34px;
 }
 
 .navbar-header button {
