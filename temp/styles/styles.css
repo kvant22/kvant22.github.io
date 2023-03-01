@@ -141,8 +141,11 @@ button:focus {
 }
 
 .header .navbar {
-  position: absolute;
-  left: 200px;
+  position: fixed;
+  /* left: 200px; */
+  right: 0px;
+  z-index: 12;
+  background-color: rgba(136, 136, 136, 0.2);
   /* padding-top: 80px; */
   /* margin-bottom: 200px; */
   /* margin-left: 260px; */
@@ -198,11 +201,11 @@ button:focus {
 .header .navbar .navbar-nav > li > a:focus {
   background-color: transparent;
   color: #181818;
-  font-size: 34px;
+  font-size: 24px;
 }
 
 .navbar-header button {
-  background-color: #ddd;
+  background-color: #983c3c;
 }
 
 .navbar-header .icon-bar {
