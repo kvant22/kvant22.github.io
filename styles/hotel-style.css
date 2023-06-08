@@ -1,0 +1,61 @@
+.hotels-bg {
+    max-height: 50vh;
+    overflow: hidden;
+    position: relative;
+  
+    background: url("https://visit-sochi.com/upload/home/bitrix/www/upload/0c9/h9ylp60ty0ip69gpe0zewe0d7pmosypx/sochi_park_otel_10.jpg") center no-repeat;
+    background-size: cover;
+    /* filter: brightness(0.5); */
+    box-shadow: 2px 8px 4px rgba(0, 0, 0, 0.3);
+  }
+
+.page-title {
+    margin: 50px;
+    padding: 20px 40px;
+    font-size: 48px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.hotel-list {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.hotel-card {
+    width: 100%;
+    border-radius: 17px;
+    background-color:aliceblue;
+    padding: 20px;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+.hotel-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+.hotel-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+  }
+  
+.hotel-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ! Адаптив */
+@media (max-width: 768px) { 
+    .page-title  {
+        display: none;
+    }
+}

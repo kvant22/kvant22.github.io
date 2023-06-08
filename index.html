@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ! Наши собственные стили -->
+  <link rel="stylesheet" href="/styles/style.css">
+
+  <!-- ! Подключаем сторонние Шрифты на сайт -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+  <!-- ! БИБЛИОТЕКИ ДЛЯ ГАЛЕРЕИ ИЗОБРАЖЕНИЙ -->
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>
+  <!-- nanogallery2 -->
+  <link  href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+  <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+
+  <title>Город Сочи | Города России</title>
+</head>
+
+<body>
+
+  <div class="video-bg">
+    <video class="video" src="/images/sochi-video.mp4" autoplay muted loop></video>
+    <header>
+      <div class="header-top">
+        <div class="info">
+          <nav>
+            <ul class="menu">
+              <li><img src="/images/logo-sochi.png" alt="" width="120px"></li>
+              <li class="menu-item"><a href="/pages/index.html">Главная</a></li>
+              <li class="menu-item"><a href="/pages/hotels.html">Где жить</a></li>
+              <li class="menu-item">
+                <a href="/pages/interestring.html">Интересные места</a>
+                <div class="submenu">
+                  <ul>
+                    <li> <a href="/pages/Interesting/beaches.html">Пляжи</a></li>
+                    <li> <a href="/pages/Interesting/cultural-life.html">Культурная жизнь</a></li>
+                    <li> <a href="/pages/Interesting/entertainment.html">Развлечения</a></li>
+                    <li> <a href="/pages/Interesting/landmarks.html">Достопримечательности</a></li>
+                    <li> <a href="/pages/Interesting/mountains-forests.html">Горы и Леса</a></li>
+                    <li> <a href="/pages/Interesting/park.html">Парки</a></li>
+                    <li> <a href="/pages/Interesting/water.html">Водоёмы</a></li>
+                    <li> <a href="/pages/Interesting/shopping.html">Покупки</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item"><a href="/pages/food.html">Где покушать</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Этот HTML код вначале скрыт, он будет активен только для мелких экранов -->
+        <div class="info-mobile">
+          <nav>
+            <ul class="menu">
+              <li><img src="/images/logo-sochi.png" alt="" width="120px"></li>
+              <li class="menu-item"><a href="index.html">Главная</a></li>
+              <li class="menu-item"><a href="/pages/hotels.html">Где жить</a></li>
+              <li class="menu-item"><a href="/pages/interestring.html">Интересные места</a></li>
+              <li class="menu-item"> <a href="/pages/Interesting/beaches.html">Пляжи</a></li>
+              <li class="menu-item"><a href="/pages/food.html">Где покушать</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </header>
+  </div>
+
+  <main class="main-content">
+
+    <div id="about" class="card-info text-center">
+      <h2>Это СОЧИ</h2>
+      <p>
+        Город Сочи – один из самых красивых, уникальных и протяженных городов России. На 145 км вдоль побережья
+        Черного моря раскинулся этот удивительный по красоте город. Сегодня Сочи является самым крупным курортным
+        городом России, важным транспортным узлом и крупным экономическим и культурным центром черноморского
+        побережья России.
+      </p>
+      <p>
+        Курорт Сочи – это не только популярный город с множеством отелей, гостиниц, пансионатов и санаториев. Это
+        не просто море и горы. Уникальные хребты и перевалы, извилистые каньоны и чарующие водопады, древние
+        пещеры и мистические дольмены. Только здесь, благодаря субтропическому климату можно увидеть самые
+        северные в мире плантации чая, а также растущие в естественных условиях магнолии, эвкалипты и пальмы.
+      </p>
+    </div>
+
+    <hr> 
+
+    <div id="about" class="card-info">
+      <h2 class="text-center">ФОТОГАЛЕРЕЯ</h2>
+
+          <div id="my_nanogallery2" data-nanogallery2 = '{
+              "thumbnailHeight":  "auto",
+              "thumbnailWidth":   400,
+              "galleryMosaic" :   [
+                { "c": 1, "r": 1, "w": 2, "h": 2 },
+                { "c": 3, "r": 1, "w": 1, "h": 1 },
+                { "c": 3, "r": 2, "w": 1, "h": 1 },
+                { "c": 1, "r": 3, "w": 1, "h": 1 },
+                { "c": 3, "r": 3, "w": 2, "h": 1 }
+              ]}'>     
+        
+            <a href="/images/i1.jpg" data-ngthumb="/images/i1.jpg"></a>
+            <a href="/images/i2.jpg" data-ngthumb="/images/i2.jpg"></a>
+            <a href="/images/i3.jpg" data-ngthumb="/images/i3.jpg"></a>
+            <a href="/images/i4.jpg" data-ngthumb="/images/i4.jpg"></a>
+            <a href="/images/i5.jpg" data-ngthumb="/images/i5.jpg"></a>
+            <a href="/images/i6.jpeg" data-ngthumb="/images/i6.jpeg"></a>
+            <a href="/images/i7.jpg.webp" data-ngthumb="/images/i7.jpg.webp"></a>
+        </div>
+  </main>
+
+  <div class="footer">
+    <p> Город Сочи </p>
+    <p> +7 999 999 99 99 </p>
+  </div>
+
+  <div href="#scroll-to-top" id="scroll-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
