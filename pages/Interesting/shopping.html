@@ -1,12 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Покупки | Город Сочи</title>
-</head>
-<body>
-  <h1>Покупки Сочи</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ! Наши собственные стили -->
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/beach-style.css" />
+
+    <!-- ! Подключаем сторонние Шрифты на сайт -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- ! БИБЛИОТЕКИ ДЛЯ ГАЛЕРЕИ ИЗОБРАЖЕНИЙ -->
+    <!-- jQuery -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- nanogallery2 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"
+    ></script>
+    <title>Покупки</title>
+  </head>
+  <body>
+    <div class="beaches-bg">
+      <header>
+        <div class="header-top">
+          <div class="info">
+            <nav>
+              <ul class="menu">
+                <li>
+                  <img src="/images/logo-sochi.png" alt="" width="120px" />
+                </li>
+                <li class="menu-item"><a href="/index.html">Главная</a></li>
+                <li class="menu-item">
+                  <a href="/pages/hotels.html">Где жить</a>
+                </li>
+                <li class="menu-item">
+                  <a href="/pages/interestring.html">Интересные места</a>
+                  <div class="submenu">
+                    <ul>
+                      <li>
+                        <a href="/pages/interesting/beaches.html">Пляжи</a>
+                      </li>
+                      <li>
+                        <a href="/pages/interesting/cultural-life.html"
+                          >Культурная жизнь</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/pages/interesting/entertainment.html"
+                          >Развлечения</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/pages/interesting/landmarks.html"
+                          >Достопримечательности</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/pages/interesting/mountains-forests.html"
+                          >Горы и Леса</a
+                        >
+                      </li>
+                      <li><a href="/pages/interesting/park.html">Парки</a></li>
+                      <li>
+                        <a href="/pages/interesting/water.html">Водоёмы</a>
+                      </li>
+                      <li>
+                        <a href="/pages/interesting/shopping.html">Покупки</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item">
+                  <a href="/pages/food.html">Где покушать</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="card-info text-center page-title">магазины продуктов</div>
+        </div>
+      </header>
+    </div>
+    
+    <main class="main-content">
+      <div class="hotel-list">
+        <div class="hotel-card">
+          <div class="hotel-container">
+            <img
+              class="hotel-image"
+              src="https://sochi.scapp.ru/wp-content/uploads/2014/09/41b7d654104e91c3eb3c478eeb112933.png"
+              alt=""
+            />
+            <h1 class="hotel-title">магазин магнит</h1>
+          </div>
+          <p>
+            Как его только не называют: самая динамично развивающаяся сеть розничного ритейла, «магазин-просрочка», «детище Галицкого», и, наконец, самый дешевый супермаркет. В принципе правильно все. По выручке ЗАО Тандер давно обогнал X5 Retail Group («Пятерочка», «Перекресток», «Карусель»). Просроченное молоко, мясо? Да, бывает. Сеть полностью держится за счет грамотного менеджмента в лице Сергея Галицкого? Да, глупо это отрицать. И, конечно, цены, они действительно ласковые для покупателя.
+          </p>
+
+          <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/239/sochi/search/%D0%9C%D0%B0%D0%B3%D0%BD%D0%B8%D1%82/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Магнит в Сочи</a><a href="https://yandex.ru/maps/239/sochi/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Сочи</a><iframe src="https://yandex.ru/map-widget/v1/?display-text=%D0%9C%D0%B0%D0%B3%D0%BD%D0%B8%D1%82&filter=chain_id%3A35471869327&ll=39.789031%2C43.574982&mode=search&sctx=ZAAAAAgBEAAaKAoSCVhzgGCO3ENAERTQRNjwykVAEhIJ7lpCPugZ8z8Rc7wC0ZOy5D8iBgABAgMEBSgAOABA7wFIAWI2cmVsZXZfcmFua2luZ19oZWF2eV9yZWxldl9zZXJwX2Zvcm11bGE9MC41OmwzX2RjMTg4NTM2YjtyZWxldl9yYW5raW5nX2hlYXZ5X2NsaWNrX21hcHNfZm9ybXVsYT0wLjU6bDNfY2xpY2tfZGM5MDA4OGI2cmVsZXZfcmFua2luZ19oZWF2eV9yZWxldl9tYXBzX2Zvcm11bGE9MC41OmwzX2RjMTg4NTM2YjtyZWxldl9yYW5raW5nX2hlYXZ5X2NsaWNrX3NlcnBfZm9ybXVsYT0wLjU6bDNfY2xpY2tfZGM5MDA4OGoCcnWCARRjaGFpbl9pZDozNTQ3MTg2OTMyN50BzcxMPaABAKgBAL0B5V6dmcIBc5HxxJAGxuPQ0kqeiZ%2F9wQaG3tCR0wSwmcSG%2FwTj7OzJBMj8wM2dBrSlqvcF9rOCzTuG34Ok7QWN9LOWvwOEi8PsBca23fmzBL%2B06uH%2BBv2T56oE4MS7qT3S1seHBtOrutUEl8jftooExoD7pATIhfPB7gPqAQDyAQD4AQCCAhRjaGFpbl9pZDozNTQ3MTg2OTMyN4oCAJICAJoCDGRlc2t0b3AtbWFwc6oCcTM1NDcxODY5MzI3LDUyNzQ4MzQ4OTI0LDgzNzkzMDMyNjc4LDYwMDMyMDYsMjIzMDgyOTk0OTEsODAyMzI4NjEyODUsNTUzOTA3MzgxOTksMjM2NDQ0ODE0OTIwLDYwMDI0MDQsMjI1MTkxNDU0MDA1sAIB&sll=39.789031%2C43.574982&sspn=0.048083%2C0.180538&text=chain_id%3A%2835471869327%29&z=12.06" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+
+
+          <h3>Фото пляжа</h3>
+          <div class="nanogallery" id="nanogallery1"></div>
+          <script>
+            $(document).ready(function () {
+              $("#nanogallery1").nanogallery2({
+                itemsBase: {
+                  width: 250,
+                  height: 150,
+                },
+                thumbnailWidth: 250,
+                thumbnailHeight: 150,
+                items: [
+                  {
+                    src: "https://sochi.scapp.ru/wp-content/uploads/2014/09/41b7d654104e91c3eb3c478eeb112933.png",
+                  },
+                ],
+              });
+            });
+          </script>
+        </div>
+
+        <div class="hotel-card">
+          <div class="hotel-container">
+            <img
+              class="hotel-image"
+              src="https://img.tourister.ru/files/1/6/9/4/4/4/9/6/original.jpg?t=1687319893044"
+              alt=""
+            />
+            <h1 class="hotel-title">Пляж Приморский в Сочи</h1>
+          </div>
+          <p>
+            В Сочи огромный выбор пляжей: платные, бесплатные, пляжи санаториев,
+            дикие пляжи — хватит всем. Туристам, оказавшимся в центральной части
+            города, рекомендуется посетить Приморский пляж. Пляж расположен
+            возле Приморской набережной Зимнего театра, протяженность составляет
+            около 700 метров. Платить за вход не требуется, но можно арендовать
+            пляжный инвентарь, впрочем, и это необязательно, если прийти со
+            своим.
+          </p>
+          <div style="position: relative; overflow: hidden">
+            <a
+              href="https://yandex.ru/maps/org/plyazh_primorskiy/52376910113/?utm_medium=mapframe&utm_source=maps"
+              style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+              >Пляж Приморский</a
+            ><a
+              href="https://yandex.ru/maps/239/sochi/category/beach/184106342/?utm_medium=mapframe&utm_source=maps"
+              style="
+                color: #eee;
+                font-size: 12px;
+                position: absolute;
+                top: 14px;
+              "
+              >Пляж в Сочи</a
+            ><iframe
+              src="https://yandex.ru/map-widget/v1/org/plyazh_primorskiy/52376910113/?ll=39.723039%2C43.583922&z=14"
+              width="400"
+              height="300"
+              frameborder="0"
+              allowfullscreen="true"
+              style="position: relative"
+            ></iframe>
+          </div>
+          <h3>Фото пляжа</h3>
+          <div class="nanogallery" id="nanogallery2"></div>
+          <script>
+            $(document).ready(function () {
+              $("#nanogallery2").nanogallery2({
+                itemsBase: {
+                  width: 120,
+                  height: 100,
+                },
+                thumbnailWidth: 120,
+                thumbnailHeight: 100,
+                items: [
+                  {
+                    src: "/images/пляж приморский.jpg",
+                  },
+                  {
+                    src: "/images/пляж приморский2.jpg",
+                  },
+                  {
+                    src: "/images/пляж приморский3.jpg",
+                  },
+                  {
+                    src: "/images/пляж приморский4.jpg",
+                  },
+                ],
+              });
+            });
+          </script>
+        </div>
+      </div>
+
+
+      <div class="hotel-list">
+        <div class="hotel-card">
+          <div class="hotel-container">
+            <img
+              class="hotel-image"
+              src="https://img.tourister.ru/files/1/5/5/3/5/5/2/1/original.jpg"
+              alt=""
+            />
+            <h1 class="hotel-title">Маяк Пляж</h1>
+          </div>
+          <p>
+            Пляж «Маяк» является бесплатным, на его берегу преимущественно
+            мелкая галька, но может также встречаться средняя и крупная. Вход в
+            море пологий и глубина постепенно нарастает, что очень удобно для
+            туристов, отдыхающих с детьми. Пляж пользуется большой
+            популярностью, поэтому часто здесь многолюдно, особенно в сезон.
+            Вода большую часть времени довольно спокойная, так как пляж
+            отделяется от открытого моря длинным волнорезом.
+          </p>
+          <div style="position: relative; overflow: hidden">
+            <a
+              href="https://yandex.ru/maps/org/mayak/188031891606/?utm_medium=mapframe&utm_source=maps"
+              style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+              >Маяк</a
+            ><a
+              href="https://yandex.ru/maps/239/sochi/category/beach/184106342/?utm_medium=mapframe&utm_source=maps"
+              style="
+                color: #eee;
+                font-size: 12px;
+                position: absolute;
+                top: 14px;
+              "
+              >Пляж в Сочи</a
+            ><iframe
+              src="https://yandex.ru/map-widget/v1/?ll=39.720859%2C43.577637&mode=search&oid=188031891606&ol=biz&z=17.39"
+              width="400"
+              height="300"
+              frameborder="0"
+              allowfullscreen="true"
+              style="position: relative"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="footer">
+      <p>Город Сочи</p>
+      <p>+7 999 999 99 99</p>
+    </div>
+  </body>
 </html>
