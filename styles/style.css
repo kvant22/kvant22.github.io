@@ -56,7 +56,8 @@ header {
   padding: 20px;
 }
 .info {
-  background-color: rgba(18, 18, 18, 0.7);
+  /* background-color: rgba(18, 18, 18, 0.7); */
+  background-color: rgba(36, 190, 83, 0.7); /* Цвет фона */
   display: block;
   margin-top: 2%;
   text-align: center;
@@ -107,6 +108,9 @@ a {
   color: #ffffff;
   font-weight: bold;
   font-size: 24px;
+}
+a:hover {
+  color: aqua;
 }
 
 
