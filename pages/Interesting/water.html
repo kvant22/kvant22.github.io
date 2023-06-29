@@ -49,34 +49,34 @@
                   <div class="submenu">
                     <ul>
                       <li>
-                        <a href="/pages/interesting/beaches.html">Пляжи</a>
+                        <a href="/pages/Interesting/beaches.html">Пляжи</a>
                       </li>
                       <li>
-                        <a href="/pages/interesting/cultural-life.html"
+                        <a href="/pages/Interesting/cultural-life.html"
                           >Культурная жизнь</a
                         >
                       </li>
                       <li>
-                        <a href="/pages/interesting/entertainment.html"
+                        <a href="/pages/Interesting/entertainment.html"
                           >Развлечения</a
                         >
                       </li>
                       <li>
-                        <a href="/pages/interesting/landmarks.html"
+                        <a href="/pages/Interesting/landmarks.html"
                           >Достопримечательности</a
                         >
                       </li>
                       <li>
-                        <a href="/pages/interesting/mountains-forests.html"
+                        <a href="/pages/Interesting/mountains-forests.html"
                           >Горы и Леса</a
                         >
                       </li>
-                      <li><a href="/pages/interesting/park.html">Парки</a></li>
+                      <li><a href="/pages/Interesting/park.html">Парки</a></li>
                       <li>
-                        <a href="/pages/interesting/water.html">Водоёмы</a>
+                        <a href="/pages/Interesting/water.html">Водоёмы</a>
                       </li>
                       <li>
-                        <a href="/pages/interesting/shopping.html">Покупки</a>
+                        <a href="/pages/Interesting/shopping.html">Покупки</a>
                       </li>
                     </ul>
                   </div>
@@ -158,101 +158,60 @@
         </div>
         <div class="hotel-card">
           <div class="hotel-container">
-            <img class="hotel-image" src="" alt="" />
-            <h1 class="hotel-title">НАЗВАНИЕ ПЛЯЖА</h1>
+            <img
+              class="hotel-image"
+              src="/images/ig.webp"
+              alt=""
+            />
+            <h1 class="hotel-title"> «Водопады Серенады любви»</h1>
           </div>
-          <p>ОПИСАНИЕ ПЛЯЖА</p>
-          КАРТА ПЛЯЖА
+          <p>
+            Каждый уголок на Черноморском побережье уникален и неповторим. Всем туристам нужно непременно посетить водопады «Серенады любви». Это название было дано не случайно. Вода струится с гор высотой в 35 метров. Поездку организуют заранее, потому что добраться туда можно только на специальных машинах и при сопровождении экскурсовода. По пути к водопаду удастся полюбоваться и другими не менее красивыми местами. Это горные массивы, реки и просто очаровательная природа.
+        
+        Около водопада откроется вид на фундуковые плантации. Прогулка на воздухе, который не только свежий, но еще и пропитанный ореховым ароматом заставит любого путешественника влюбиться в это райское местечко. Сам водопад с первого взгляда завораживает ниспадающей чистейшей водой. Большинство присутствующих с удовольствием плещутся в этой воде. Чтобы полюбоваться всей красотой водопада надо немного отойти в сторону, там специально сделан мостик. Там же ожидает еще не менее впечатляющий, но уже состоящий из двух каскадов водопад. Внизу не возможно не заметить глубокую чашу, словно ее кто-то долго выбивал, только появилась она сама под воздействием воды.
+        
+        Находятся водопады «Серенады любви» в Лазаревском районе, недалеко от аула Наджиго.
+            
+          </p>
+          <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/239/sochi/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Сочи</a><a href="https://yandex.ru/maps/239/sochi/geo/vodopad_lyubvi/4126400642/?ll=39.325916%2C43.967076&utm_medium=mapframe&utm_source=maps&z=16" style="color:#eee;font-size:12px;position:absolute;top:14px;">Водопад Любви в городе Сочи — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=39.325916%2C43.967076&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0MTI2NDAwNjQyEpcB0KDQvtGB0YHQuNGPLCDQmtGA0LDRgdC90L7QtNCw0YDRgdC60LjQuSDQutGA0LDQuSwg0LPQvtGA0L7QtNGB0LrQvtC5INC-0LrRgNGD0LMg0KHQvtGH0LgsINCb0LDQt9Cw0YDQtdCy0YHQutC40Lkg0YDQsNC50L7QvSwg0JLQvtC00L7Qv9Cw0LQg0JvRjtCx0LLQuCIKDb1NHUIVSN4vQg%2C%2C&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+          
           <h3>Фото пляжа</h3>
+          <div class="nanogallery" id="nanogallery2"></div>
+        
+          <script>
+            $(document).ready(function () {
+              $("#nanogallery2").nanogallery2({
+                itemsBase: {
+                  width: 120,
+                  height: 100,
+                },
+                thumbnailWidth: 120,
+                thumbnailHeight: 100,
+                items: [
+                  {
+                    src: "/images/ig.webp",
+                  }
+                ],
+              });
+            });
+          </script>
+        
         </div>
       </div>
-      <div class="hotel-list">
-        <div class="hotel-card">
-          <div class="hotel-container">
-            <img class="hotel-image" src="" alt="" />
-            <h1 class="hotel-title"></h1>
-          </div>
-          <p>ОПИСАНИЕ ПЛЯЖА</p>
-        </div>
-      </div>
+
+
+
     </main>
     <div class="footer">
       <p>Город Сочи</p>
+      <p>
+        <a href="developers.html">
+          Разработка сайта
+        </a>
+      </p>
       <p>+7 999 999 99 99</p>
     </div>
   </body>
 </html>
 
-<div class="card-info text-center page-title">ВОДОЕМЫ</div>
-</div>
-</header>
-</div>
-<main class="main-content">
-<div class="hotel-list">
-<div class="hotel-card">
-  <div class="hotel-container">
-    <img
-      class="hotel-image"
-      src="/images/ig.webp"
-      alt=""
-    />
-    <h1 class="hotel-title"> «Водопады Серенады любви»</h1>
-  </div>
-  <p>
-    Каждый уголок на Черноморском побережье уникален и неповторим. Всем туристам нужно непременно посетить водопады «Серенады любви». Это название было дано не случайно. Вода струится с гор высотой в 35 метров. Поездку организуют заранее, потому что добраться туда можно только на специальных машинах и при сопровождении экскурсовода. По пути к водопаду удастся полюбоваться и другими не менее красивыми местами. Это горные массивы, реки и просто очаровательная природа.
 
-Около водопада откроется вид на фундуковые плантации. Прогулка на воздухе, который не только свежий, но еще и пропитанный ореховым ароматом заставит любого путешественника влюбиться в это райское местечко. Сам водопад с первого взгляда завораживает ниспадающей чистейшей водой. Большинство присутствующих с удовольствием плещутся в этой воде. Чтобы полюбоваться всей красотой водопада надо немного отойти в сторону, там специально сделан мостик. Там же ожидает еще не менее впечатляющий, но уже состоящий из двух каскадов водопад. Внизу не возможно не заметить глубокую чашу, словно ее кто-то долго выбивал, только появилась она сама под воздействием воды.
-
-Находятся водопады «Серенады любви» в Лазаревском районе, недалеко от аула Наджиго.
-    
-  </p>
-  <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/239/sochi/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Сочи</a><a href="https://yandex.ru/maps/239/sochi/geo/vodopad_lyubvi/4126400642/?ll=39.325916%2C43.967076&utm_medium=mapframe&utm_source=maps&z=16" style="color:#eee;font-size:12px;position:absolute;top:14px;">Водопад Любви в городе Сочи — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=39.325916%2C43.967076&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0MTI2NDAwNjQyEpcB0KDQvtGB0YHQuNGPLCDQmtGA0LDRgdC90L7QtNCw0YDRgdC60LjQuSDQutGA0LDQuSwg0LPQvtGA0L7QtNGB0LrQvtC5INC-0LrRgNGD0LMg0KHQvtGH0LgsINCb0LDQt9Cw0YDQtdCy0YHQutC40Lkg0YDQsNC50L7QvSwg0JLQvtC00L7Qv9Cw0LQg0JvRjtCx0LLQuCIKDb1NHUIVSN4vQg%2C%2C&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
-  
-  <h3>Фото пляжа</h3>
-  <div class="nanogallery" id="nanogallery2"></div>
-
-  <script>
-    $(document).ready(function () {
-      $("#nanogallery2").nanogallery2({
-        itemsBase: {
-          width: 120,
-          height: 100,
-        },
-        thumbnailWidth: 120,
-        thumbnailHeight: 100,
-        items: [
-          {
-            src: "/images/ig.webp",
-          }
-        ],
-      });
-    });
-  </script>
-
-</div>
-<div class="hotel-card">
-  <div class="hotel-container">
-    <img class="hotel-image" src="" alt="" />
-    <h1 class="hotel-title">НАЗВАНИЕ ПЛЯЖА</h1>
-  </div>
-  <p>ОПИСАНИЕ ПЛЯЖА</p>
-  КАРТА ПЛЯЖА
-  <h3>Фото пляжа</h3>
-</div>
-</div>
-<div class="hotel-list">
-<div class="hotel-card">
-  <div class="hotel-container">
-    <img class="hotel-image" src="" alt="" />
-    <h1 class="hotel-title"></h1>
-  </div>
-  <p>ОПИСАНИЕ ПЛЯЖА</p>
-</div>
-</div>
-</main>
-<div class="footer">
-<p>Город Сочи</p>
-<p>+7 999 999 99 99</p>
-</div>
-</body>
-</html>
