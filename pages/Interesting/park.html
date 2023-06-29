@@ -1,15 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Парки | Город Сочи</title>
-</head>
-<body>
-  <h1>Парки Сочи</h1>
-  <h2>Страница находится в разработке</h2>
 
-  <img src="/images/page_build.png" alt="">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ! Наши собственные стили -->
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/beach-style.css" />
+  <!-- ! Подключаем сторонние Шрифты на сайт -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <!-- ! БИБЛИОТЕКИ ДЛЯ ГАЛЕРЕИ ИЗОБРАЖЕНИЙ -->
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>
+  <!-- nanogallery2 -->
+  <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet"
+    type="text/css" />
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+
+  <title>Пляжи | Город Сочи</title>
+</head>
+
+<body>
+  <div class="beaches-bg">
+    <header>
+      <div class="header-top">
+        <div class="info">
+          <nav>
+            <ul class="menu">
+              <li>
+                <img src="/images/logo-sochi.png" alt="" width="120px" />
+              </li>
+              <li class="menu-item"><a href="/index.html">Главная</a></li>
+              <li class="menu-item">
+                <a href="/pages/hotels.html">Где жить</a>
+              </li>
+              <li class="menu-item">
+                <a href="/pages/interestring.html">Интересные места</a>
+                <div class="submenu">
+                  <ul>
+                    <li><a href="/pages/interesting/beaches.html">Пляжи</a></li>
+                    <li><a href="/pages/interesting/cultural-life.html">Культурная жизнь</a></li>
+                    <li><a href="/pages/interesting/entertainment.html">Развлечения</a></li>
+                    <li><a href="/pages/interesting/landmarks.html">Достопримечательности</a></li>
+                    <li><a href="/pages/interesting/mountains-forests.html">Горы и Леса</a></li>
+                    <li><a href="/pages/interesting/park.html">Парки</a></li>
+                    <li><a href="/pages/interesting/water.html">Водоёмы</a></li>
+                    <li><a href="/pages/interesting/shopping.html">Покупки</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-item"><a href="/pages/food.html">Где покушать</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="card-info text-center page-title">Парки</div>
+      </div>
+    </header>
+  </div>
+  <main class="main-content">
+    <div class="hotel-list">
+      <div class="hotel-card">
+        <div class="hotel-container">
+          <img class="hotel-image" src="https://www.sochipark.ru/upload/images/2-dnya/10.jpg" alt="" />
+          <h1 class="hotel-title">Сочи-Парк</h1>
+        </div>
+        <p>
+          Самый популярный парк развлечений Сочи — с аттракционами, дельфинарием, игровыми площадками и стилизованной
+          территорией. Единый билет приобретается на весь день, и можно свободно посещать все горки, качели и павильоны.
+
+
+        </p>
+        <!-- Вставить карту с пляжем -->
+
+        <div style="position:relative;overflow:hidden;"><a
+            href="https://yandex.ru/maps/org/sochi_park/79909708914/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Сочи Парк</a><a
+            href="https://yandex.ru/maps/10995/krasnodar-krai/category/park/184106346/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Парк культуры и отдыха в Краснодарском
+            крае</a><iframe
+            src="https://yandex.ru/map-widget/v1/org/sochi_park/79909708914/?ll=39.967364%2C43.404602&z=13" width="400"
+            height="300" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+
+        <h3></h3>
+        <div class="nanogallery" id="nanogallery1"></div>
+
+        <script>
+          $(document).ready(function () {
+            $("#nanogallery1").nanogallery2({
+              itemsBase: {
+                width: 120,
+                height: 100,
+              },
+              thumbnailWidth: 120,
+              thumbnailHeight: 100,
+              items: [
+                {
+                  src: "/images/сочи парки.webp",
+                },
+                {
+                  src: "/images/сочи парк.jpg",
+                },
+                {
+                  src: "/images/парк сочи.webp",
+                },
+                {
+                  src: "/images/парки сочи.webp",
+                },
+              ],
+            });
+          });
+        </script>
+
+
+
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-container">
+          <img class="hotel-image"
+            src="https://russo-travel.ru/upload/medialibrary/7aa/7aafe992ab6a30089aab3eadc6c8996b.jpg" alt="" />
+          <h1 class="hotel-title">Парк Дендрарий</h1>
+        </div>
+        <p> Дендрарий — самый большой из всех парков Сочи в центральном районе. Это настоящее живое зеленое чудо. Парк
+          основан еще в конце XIX века писателем и искусствоведом С. Н. Худяковым и сначала назывался «Надежда» по имени
+          его жены. Дача писателя с таким же названием, построенная в парке, сохранилась до сих пор, и при желании ее
+          можно посетить.
+
+        </p>
+        <div style="position:relative;overflow:hidden;"><a
+            href="https://yandex.ru/maps/239/sochi/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Сочи</a><a
+            href="https://yandex.ru/maps/239/sochi/geo/park_dendrariy/120128203/?ll=39.742775%2C43.571278&utm_medium=mapframe&utm_source=maps&z=15"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Парк Дендрарий в городе Сочи —
+            Яндекс Карты</a><iframe
+            src="https://yandex.ru/map-widget/v1/?ll=39.742775%2C43.571278&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgkxMjAxMjgyMDMSWNCg0L7RgdGB0LjRjywg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksINCh0L7Rh9C4LCDQv9Cw0YDQuiDQlNC10L3QtNGA0LDRgNC40LkiCg1B-B5CFb5JLkI%2C&z=15"
+            width="400" height="300" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+        <h3></h3>
+        <div class="nanogallery" id="nanogallery2"></div>
+
+        <script>
+          $(document).ready(function () {
+            $("#nanogallery2").nanogallery2({
+              itemsBase: {
+                width: 120,
+                height: 100,
+              },
+              thumbnailWidth: 120,
+              thumbnailHeight: 100,
+              items: [
+                {
+                  src: "/images/дендрарий.jpeg",
+                },
+                {
+                  src: "/images/парк дендрарий.jpg",
+                },
+                {
+                  src: "/images/дендрарий сочи.jpg",
+                },
+                {
+                  src: "/images/дендрарий сочи парк.jpg",
+                },
+              ],
+            });
+          });
+        </script>
+      </div>
+    </div>
+    <div class="hotel-list">
+      <div class="hotel-card">
+        <div class="hotel-container">
+          <img class="hotel-image" src="data:image/jpeg;base64,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
+          " alt="" />
+          <h1 class="hotel-title">Солохаул Парк</h1>
+        </div>
+        <p>В 40 км от Сочи в селе Солохаул с известными чайными плантациями с 2017 года работает парк отдыха, где
+          посетители могут в окружении гор: подняться на аэролифте или зиплайне, полетать на воздушном шаре, прокатиться
+          на БТР, расслабиться в гамаке. Парк «Солохаул» в Сочи — удивительное место, которое пропитано мудростью гор,
+          дыханием моря и южным ветром.
+
+        </p>
+        <div style="position:relative;overflow:hidden;"><a
+            href="https://yandex.ru/maps/org/solokhaul_park/44685164992/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Солохаул Парк</a><a
+            href="https://yandex.ru/maps/239/sochi/category/park/184106346/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Парк культуры и отдыха в Сочи</a><a
+            href="https://yandex.ru/maps/239/sochi/category/urban_forest/256037362/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:28px;">Лесопарк в Сочи</a><iframe
+            src="https://yandex.ru/map-widget/v1/org/solokhaul_park/44685164992/?ll=39.632745%2C43.799004&z=13"
+            width="400" height="300" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+            <h3></h3>
+            <div class="nanogallery" id="nanogallery3"></div>
+    
+            <script>
+              $(document).ready(function () {
+                $("#nanogallery3").nanogallery2({
+                  itemsBase: {
+                    width: 120,
+                    height: 100,
+                  },
+                  thumbnailWidth: 120,
+                  thumbnailHeight: 100,
+                  items: [
+                    {
+                      src: "/images/солохаул.jpg",
+                    },
+                    {
+                      src: "/images/солохаул сочи.jpg",
+                    },
+                    {
+                      src: "/images/парк солохаул.webp",
+                    },
+                    {
+                      src: "/images/солохаул сочи парк.jpg",
+                    },
+                  ],
+                });
+              });
+            </script>
+    
+      </div>
+    </div>
+  </main>
+  <div class="footer">
+    <p>Город Сочи</p>
+    <p>+7 999 999 99 99</p>
+  </div>
 </body>
+
 </html>
