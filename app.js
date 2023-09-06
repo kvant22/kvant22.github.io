@@ -27,6 +27,11 @@ window.addEventListener('scroll', function() {
   }
 });
 
+// document.getElementById('scroll-to-top').addEventListener('click', function() {
+//   // window.scrollTo(0, 0);
+//   document.body.scrollTop = 0; // для Safari
+//   document.documentElement.scrollTop = 0; // для Chrome, Firefox, IE и Opera
+// });
 
 document.getElementById('scroll-to-top').addEventListener('click', function() {
   window.scrollTo({
