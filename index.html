@@ -2,165 +2,130 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>3D моделирование</title>
 </head>
 
 <body>
-  <div class="fone">
-    <video class="video__media" src="assets/images/video5370937168644550014.mp4" autoplay muted loop></video>
     <header>
-      <div class="header-top">
-        <div class="info">
-          <h1>Межрегиональный фотоконкурс <br> «По улицам родного города»</h1>
-          <p>
-            Цель Конкурса: создание условий для стимулирования интереса обучающихся к фотографии, предоставление
-            возможности продемонстрировать свое мастерство и идеи в изображении родного города через фотографию.
-          </p>
+        <div class="header-container">
+            <a href="index.html" class="title">
+                <img src="images/3D.png" width="400" alt="">
+            </a>
+            <nav class="header-menu">
+                <ul>
+                    <li class=""><a class="header-link" href="#participants">Условия участия</a></li>
+                    <li class=""><a class="header-link" href="#nominations">Номинации</a></li>
+                    <li class=""><a class="header-link" href="#requests">Заявки</a></li>
+                    <li class=""><a class="header-link" href="">Положение</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-
     </header>
-  </div>
-  <nav>
-
-    <ul>
-      <li class="menu-item"><a class="aa" href="#members">Условия участия</a></li>
-      <li class="menu-item"><a class="aa" href="#nominations">Номинации</a></li>
-      <li class="menu-item"><a class="aa" href="#requirements">Требования</a></li>
-      <li class="menu-item"><a class="aa" href="#norm">Сроки и форма проведения</a></li>
-      <li class="menu-item"><a href="assets/files/photo_konkurs.pdf">Положение</a></li>
-    </ul>
-
-  </nav>
-
-  <main
-    style="background-image: url('assets/images/fonr-4.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
-    <div class="main-content">
-      <div class="center">
-        <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkRHgK8oynzFbahLFcXvPAzLs--myOlz9RrsTcQtF1f4dltA/viewform">
-                <button class="bg-blue btn-main">
-                    
-                        Зарегистрироваться
-                    
-                </button>
-            </a> -->
-        <br>
-        <hr>
-        <br>
-        <div id="members" class="card-alert">
-          <h2>Участники</h2>
-
-          <div class="students">
-
-            К участию в Конкурсе приглашаются школьники общеобразовательных учреждений, обучающиеся учреждений
-            дополнительного образования, обучающиеся системы среднего профессионального образования.
 
 
-            <p>
+    <main>
+        <div class="main-container">
 
-              Возрастные категории участников:
-            </p>
-            <p>от 10 до 17 лет (включительно).</p>
-
-          </div>
-        </div>
-        <hr>
-
-        <br>
-        <div id="nominations" class="card-alert-1">
-          <h2>Межрегиональный фотоконкурс «По улицам родного города» проводится по следующим номинациям:</h2>
-          <div class="cards">
-
-
-            <div class="card cardOne">
-              <h3>ПРОГУЛКА ПО ГОРОДУ</h3>
-
-              <p>Номинация призвана показать красоту города во время прогулок. </p>
-
-              <div class="center">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSf0ao9cQfn0RQHH8sCvuy-c4GoOCpolBT7YcjPezmKIM1f9kg/viewform?usp=sharing">
-                  <button><strong>Зарегистрироваться</strong></button>
-                </a>
-              </div>
+            <div class="contest-block">
+                <h1 class="contest_name">
+                    Краевой конкурс<br> по 3D моделированию<br>
+                    «Город будущего»
+                </h1>
+                <h2 class="contest_purpose">Цель конкурса: создание условий для выявление талантливых обучающихся в
+                    направлении «3D моделирование».</h2>
             </div>
-            <div class="card cardTwo">
-              <h3>ГОРОД ИСТОРИЧЕСКИЙ</h3>
 
-              <p>Эта номинация посвещенная историческим объектам города</p>
+            <div id="participants"></div>
 
-              <div class="center">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSf0ao9cQfn0RQHH8sCvuy-c4GoOCpolBT7YcjPezmKIM1f9kg/viewform?usp=sharing">
-                  <button><strong>Зарегистрироваться</strong></button>
-                </a>
-              </div>
+            <div class="participants_block">
+                <div class="participants_block-img">
+                    <img src="images/video-img.jpg" style="width: 110vh;" alt="">
+                </div>
+                <div class="participants_block-text">
+                    <h1 class="participants_block-h1"> Условия участия </h1>
+                    <div class="participants_block-description">
+                        <p style="font-size: 1.5vw"> Участие в Конкурсе является бесплатным. Конкурс является публичным и открытым. Формат
+                            проведения – дистанционный.
+                        <p style="font-size: 1.5vw"> Конкурс проводится с 11 по 31 марта 2024 года в КГБПОУ «Бийский промышленно-технологический
+                            колледж» структурном подразделении Детский технопарк «Кванториум».</p>
+                        <p style="font-size: 1.5vw"> Возрастные категории участников:
+                            <br> 1 группа – 7-10 лет
+                            <br> 2 группа – 11-13 лет
+                            <br> 3 группа – 14-17 лет
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="card cardThree">
-              <h3>ГОРОД СОВРЕМЕННЫЙ</h3>
 
-              <p>Эта номинация позволяет увидеть город с другой стороны и оценить его современный облик.</p>
+            <div id="nominations"></div>
 
-              <div class="center">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSf0ao9cQfn0RQHH8sCvuy-c4GoOCpolBT7YcjPezmKIM1f9kg/viewform?usp=sharing">
-                  <button><strong>Зарегистрироваться</strong></button>
-                </a>
-              </div>
+            <div class="nominations_block">
+                <h1 style="font-size: 75px; color: #1F0709;">Номинации</h1>
 
+                <div class="nominations_blocks">
+                    <div class="nomination" id="first_nomination">
+                        <img class="nomination-img" src="images/CITY OF FUTURE1.jpg" alt="">
+                        <div class="nominations_block-text" >
+                            <h1  style="color: #1F0709;font-size: 2vw;">Начальное 3D-моделирование</h1>
+                            <p> город будущего, выполненный 3D ручкой </p>
+                        </div>
+                    </div>
+                    <div class="nomination" id="second_nomination">
+                        <img class="nomination-img" src="images/CITY OF FUTURE3.jpg" alt="">
+                        <div class="nominations_block-text">
+                            <h1  style="color: #1F0709; font-size: 2vw;">Районы, кварталы</h1>
+                            <p> композиционная зарисовка города будущего, с улицами, архитектурными объектами,
+                                транспортом и т.д., выполненные 3D ручкой или в любом 3D редакторе </p>
+                        </div>
+                    </div>
+                    <div class="nomination" id="third_nomination">
+                        <img class="nomination-img" src="images/CITY OF FUTURE2.jpg" alt="">
+                        <div class="nominations_block-text">
+                            <h1 style="color: #1F0709;">3D-архитектура</h1>
+                            <p> выдуманные (несуществующие) архитектурные объекты города, выполненные в любом 3D
+                                редакторе </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div style="font-size: 1vw" id="requests"> Победителям и призерам конкурса в каждой номинации и возрастной группе вручается диплом 1, 2, 3 степени.  </div>
+
+            <div class="requests_block">
+                <div class="requests_block-text">
+                    <h1 class="requests_block-h1"> Заявки </h1>
+                    <div class="requests_block-button"> Подать заявку на конкурс </div>
+                    <div class="requests_block-description"> <p> Сроки приема заявок на участие в конкурсе <br> с<span style="text-decoration: underline;"> 11 </span> по <span style="text-decoration: underline;"> 31 </span> марта 2024 года.  </p> 
+                        <p> <span style="text-decoration: underline;"> 1-5 апреля </span> – работа жюри, подведение итогов конкурса. </p><p> <span style="text-decoration: underline;"> 8 апреля </span> – объявление победителей и призеров конкурса</p>  </div>
+                </div>
+                <img src="images/drone.jpg" style="width: 50vw;" alt="">
+            </div>
+
+            <div></div>
+
+
+
+
 
         </div>
-      </div>
-      <hr>
-      <br>
-      <div class="card-alert-1">
-        <h2 id="requirements">Обязательные требования</h2>
-        <p>1. На конкурс принимаются фотографии, которые соответствуют направленности конкурса и номинациям.</p>
-        <p>2. Каждый файл фотографии обязательно подписывается Ф.И. номинация, название работы.</p>
-        <p>3. К участию в Конкурсе допускаются только фотографии, выполненные участниками самостоятельно.</p>
-        <p>4. Конкурсанты могут предоставить только по одной фотографии в каждую номинацию.</p>
-      </div>
-      <hr>
-      <br>
-      <div id="norm" class="card-alert-1">
-        <h2>Сроки и форма проведения</h2>
-        <br /> Прием фотографий осуществляется:
-        <br><span class="bold-blue-text">02.10.2023 по 29.10.2023 включительно.</span> <br>
-        <br /> Работа жюри Конкурса:
-        <span class="bold-blue-text">30-31 октября 2023г.</span> <br>
-        <br> Открытие фотовыставки, подведение итогов фотоконкурса, награждение победителей:
-        <span class="bold-blue-text">1-6 ноября 2023г.</span>
-        <p></p>
-        <div class="center">
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-text"> Кванториум <br> Бийск </div>
+            <div class="footer-statute"> КГБПОУ «Бийский промышленно-технологический колледж» <br> структурное подразделение Детский технопарк «Кванториум». 
+               <br> Алтайский край, город Бийск, улица Горно-Алтайская, 60 
+                 </div>
+                 <div class="footer-socials"> 
+                  <a style="color: black;display: flex; align-items: center; font-size: 20px;  gap: 5px;" href="">  <img src="images/VK Logo.png" style="width: 2vw;" alt=""> Группа ВК </a>
+                    <p style="display: flex; align-items: center; gap: 5px;"> <img style="width: 2vw" src="images/whatsapp.png" alt=""> 8-964-600-6362 </p>
+                </div>
+            <div class="footer-text"> kosmiN , sHMARik </div>
         </div>
-      </div>
-      <hr>
-      <div class="footer">
-        <p>
-          КВАНТОРИУМ БИЙСК
-        </p>
-        <p>
-          Разработчик - ученик IT-Квантум Добромилов Артем
-        </p>
-        <p>
-          +7 964 600 6362
-        </p>
-      </div>
-  </main>
-
-  <div href="#scroll-to-top" id="scroll-to-top">
-    <i class="fas fa-chevron-up"></i>
-  </div>
-
-  <script src="app.js"></script>
+    </footer>
 </body>
-
 
 </html>
