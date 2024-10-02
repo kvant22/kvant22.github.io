@@ -37,6 +37,7 @@ body::-webkit-scrollbar {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 @font-face {
@@ -48,7 +49,7 @@ a {
     font-family: "KRASNODAR";
     src: url(fonts/Concrete-Regular.otf);
 }
-
+ 
 
 header {
     width: 100%;
@@ -100,7 +101,7 @@ main {
 .main-container {
     display: flex;
     flex-direction: column;
-    gap: 125px;
+    gap: 55px;
     align-items: center;
 }
 
@@ -111,13 +112,14 @@ main {
 .contest_name {
     color: rgb(255, 255, 255);
     font-size: 7vw;
-    line-height: 1.4;
+    line-height: 1.2;
     margin-bottom: 6vh;
+    
 }
 
 .contest_purpose {
     color: #1F0709;
-    font-size: 2.7vw;
+    font-size: 2vw;
     letter-spacing: 1.25px;
 }
 
@@ -172,8 +174,8 @@ main {
 }
 
 .nomination-img {
-    width: 24vw;
-    height: 19vw;
+    width: 25vw;
+    height: 25vw;
     border-radius: 5px;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
@@ -232,6 +234,7 @@ footer {
    display: flex;
    border-top: .1px solid black;
    font-family: "KRASNODAR";
+   margin-top: 75px;
 }
 
 .footer-container {
@@ -251,8 +254,4 @@ footer {
     display: flex;
     flex-direction: column;
     gap:2px;
-}
-
-.zav-white {
-    color: white; 
 }
