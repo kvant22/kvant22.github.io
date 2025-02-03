@@ -1,0 +1,148 @@
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="title">
+            </a>
+            <nav class="header-menu">
+                <ul>
+                    <li class=""><a class="header-link" href="#participants">Условия участия</a></li>
+                    <li class=""><a class="header-link" href="#nominations">Номинации</a></li>
+                    <li class=""><a class="header-link" href="#requests">Заявки</a></li>
+                    <li class=""><a class="header-link" href="sss.docx">Положение</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="main-container">
+
+            <div class="contest-block">
+                <h1 class="contest_name">
+                    <span style="color: black;">Итоги</span> Межрегионального<br>  <span style="color: blue;"> фотоконкурса </span><br>
+                    <span style="color: red;">«Люди  великой страны»</span> 
+                </h1>
+            </div>
+
+
+            <h3>Номинация «Профессия»</h3>
+
+            <ul style="list-style: none; color: #383535;">
+                <li>
+                    <span style="color: red;">1 место</span> Таборкина Алёна Антоновна <br> (ГАУ ДО НСО «ОЦРТДиЮ» ДТ «Кванториум» г. Новосибирск, педагог-наставник Ляпунова Эмилия Юрьевна);
+                </li>
+                <li>
+                    <span style="color: red;">2 место</span> Клюкин Даниил Михайлович<br> (ГАУ ДО НСО «ОЦРТДиЮ» ДТ «Кванториум» г. Новосибирск, педагог-наставник Ляпунова Эмилия Юрьевна);
+                </li>
+                <li>
+                    <span style="color: red;">2 место</span> Накарякова Екатерина Ивановна<br> (МБУ ДО Центр детского (юношеского) технического творчества «Меридиан» Новокузнецкий городской округ, педагог-наставник Герасименко Олег Юрьевич);
+                </li>
+                <li>
+                    <span style="color: red;">3 место</span> Шевчук Милана Дмитриевна<br> (ГАПОУ КузТАГиС, ДТ «Кванториум 42», педагог-наставник Шевчук Диана Дмитриевна);
+                </li>
+            </ul>
+            
+            <h3>
+                Номинация «Семейные Ценности»
+            </h3>
+
+            <ul style="list-style: none; color: #383535;">
+                <li>
+                    <span style="color: red;">1 место</span> Булхак Мария Дмитриевна<br> (ГАУ ДПО ИРО МТ «Кванториум» г. Оренбург, педагог-наставник Сапрыкина Анжелика Александровна);
+                </li>
+                <li><span style="color: red;">2 место</span> Козлова Валерия Антоновна<br> (МАОУ СОШ №22 ЦДО Мобильный технопарк Кванториум-Тамбов (МБОУ «Никифоровская СОШ №1 им. Героя РФ А.С. Досягаева»), педагог-наставник Мордовин Александр Викторович);
+                </li>
+                <li><span style="color: red;">2 место</span> Шевчук Милана Дмитриевна<br> (ГАПОУ КузТАГиС, ДТ «Кванториум 42», педагог-наставник Шевчук Диана Дмитриевна);
+                </li>
+                <li><span style="color: red;">3 место</span> Костин Эдуард Русланович<br> (МБУ ДО Центр детского (юношеского) технического творчества «Меридиан» Новокузнецкий городской округ, педагог-наставник Григорьев Владимир Сергеевич);
+                </li>
+            </ul>
+            
+            <h3>
+                Номинация «Традиции Народов РФ»
+            </h3>
+
+            <ul style="list-style: none; color: #383535;">
+                <li>
+                    <span style="color: red;">1 место</span> Матвеев Матвей Андреевич<br> (МАОУ СОШ №4, ДТ «Кванториум г. Верхняя Пышма» Свердловская область г. Верхняя Пышма, педагог-наставник Матвеев Андрей Николаевич);
+                </li>
+                <li>
+                    <span style="color: red;">2 место</span> Жукова Елизавета Дмитриевна<br> (МАОУ СОШ №22 ЦДО Мобильный технопарк Кванториум-Тамбов (Сампурский филиал МБОУ «Сатинская СОШ») Тамбовская область Сампурский район, педагог-наставник Мордовин Александр Викторович);
+                </li>
+            </ul>
+
+
+            <!-- <div style="margin-top: 75px;" id="participants"></div>
+
+            <div class="participants_block">
+                <div class="participants_block-img">
+                    <img src="images/video-img.jpg" style="width: 52vw;" alt="">
+                </div>
+                <div class="participants_block-text">
+                    <h1 class="participants_block-h1"> Условия участия </h1>
+                    <div class="participants_block-description">
+                        <p style="font-size: 1.5vw"> Участие в Конкурсе является бесплатным. Конкурс является публичным и открытым.
+                        <p style="font-size: 1.5vw">К участию в Конкурсе приглашаются учащиеся общеобразовательных учреждений, дополнительного образования обучающиеся сети федеральной сети детских технопарков «Кванториум» и «IT-Куб», обучающиеся системы среднего профессионального образования</p>
+                        <p style="font-size: 1.5vw"> Возрастные категории участников:
+                            <br> Возраст участников Конкурса от 10 до 17 лет
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="nominations"></div>
+
+            <div class="nominations_block">
+                <h1 style="font-size: 75px; color: #1F0709;">Номинации</h1>
+
+                <div class="nominations_blocks">
+                    <div class="nomination" id="first_nomination">
+                        <img class="nomination-img" src="images/photo_2024-09-24_17-27-13.jpg" alt="">
+                        <div class="nominations_block-text" >
+                            <h1  style="color: #1F0709;font-size: 2vw;">Традиции народов РФ</h1>
+                        </div>
+                    </div>
+                    <div class="nomination" id="second_nomination">
+                        <img class="nomination-img" src="images/photo_2024-09-24_17-34-53.jpg" alt="">
+                        <div class="nominations_block-text">
+                            <h1  style="color: #1F0709; font-size: 2vw;"> Профессии </h1>
+                        </div>
+                    </div>
+                    
+                    <div class="nomination" id="third_nomination">
+                        <img class="nomination-img" src="images/photo_2024-09-24_17-35-41.jpg" alt="">
+                        <div class="nominations_block-text">
+                            <h1 style="color: #1F0709; font-size: 2vw;"> Семейные ценности </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="font-size: 1.532vw" id="requests"> Победителям и призерам конкурса в каждой номинации и возрастной группе вручается диплом 1, 2, 3 степени.  </div>
+
+            <div class="requests_block">
+                <div class="requests_block-text">
+                    <h1 class="requests_block-h1"> Заявки </h1>
+                    <a href="https://forms.yandex.ru/cloud/65cede51f47e731b5f29a8e8/"> <div class="requests_block-button">  Подать заявку на конкурс</div> </a>
+                    <div class="requests_block-description"> <p> Сроки приема заявок на участие в конкурсе <br> с<span style="text-decoration: underline;"> 7 </span> по <span style="text-decoration: underline;"> 31 </span> октября 2024 года </p> 
+                        <p> <span style="text-decoration: underline;"> 1 Ноября </span> – работа жюри, подведение итогов конкурса. </p><p> <span style="text-decoration: underline;"> 4-8 ноября </span> – объявление победителей и призеров конкурса</p>  </div>
+                </div>
+                <img src="images/drone.jpg" style="width: 50vw;" alt="">
+            </div>
+
+        </div> -->
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-text"> Кванториум <br> Бийск </div>
+            <div class="footer-statute"> КГБПОУ «Бийский промышленно-технологический колледж» <br> структурное подразделение Детский технопарк «Кванториум». 
+               <br> Алтайский край, город Бийск, улица Горно-Алтайская, 60 
+                 </div>
+                 <div class="footer-socials"> 
+                  <a href="https://vk.com/kvantorium_biysk?ysclid=m1q8s5cp1f959399680" style="color: black;display: flex; align-items: center; font-size: 20px;  gap: 5px;" href="">  <img src="images/VK Logo.png" style="width: 2vw;" alt=""> Группа ВК </a>
+                    <p style="display: flex; align-items: center; gap: 5px;"> <img style="width: 2vw" src="images/whatsapp.png" alt=""> 8-964-600-6362 </p>
+                </div>
+            <div class="footer-text"> kosmiN , sHMARik </div>
+        </div>
+    </footer>
