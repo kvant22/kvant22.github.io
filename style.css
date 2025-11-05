@@ -257,3 +257,46 @@ footer {
     flex-direction: column;
     gap:2px;
 }
+
+.results-block {
+  background: #fffafa;
+  padding: 60px 30px;
+  margin: 50px 0;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(75,16,16,0.07);
+}
+
+.results-block-title {
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.results-block-description {
+  text-align: left;
+}
+
+.results-block-winners h2 {
+  margin-top: 30px;
+}
+
+.results-block-winners ul {
+  margin-bottom: 25px;
+  padding-left: 25px;
+}
+
+.gallery {
+  display: flex;
+  gap: 2vw;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+  min-height: 100px;
+  /* border or background if желаете */
+}
+
+.gallery img {
+  width: 20vw;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(65,10,112,0.10);
+}
