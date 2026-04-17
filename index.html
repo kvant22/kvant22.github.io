@@ -1,16 +1,505 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="" />
-  <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Конкурс «История Победы» | Компьютерная графика и 3D-моделирование</title>
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Inter & Roboto Condensed for heroic style -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fefcf5;
+            color: #1e1e2a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* патриотическая цветовая гамма: бордовый, золотой, тёмный серый */
+        :root {
+            --victory-red: #b22234;
+            --victory-gold: #d4af37;
+            --dark-charcoal: #2c2e3a;
+            --ribbon-orange: #e67e22;
+            --ribbon-black: #2d2d2d;
+            --light-bg: #fef7e6;
+            --card-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+            --border-radius: 1.25rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ribbon accent line */
+        .hero {
+            background: linear-gradient(135deg, #1f2a2e 0%, #2e3b2c 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: repeating-linear-gradient(90deg, var(--ribbon-black) 0px, var(--ribbon-black) 30px, var(--ribbon-orange) 30px, var(--ribbon-orange) 60px);
+        }
+
+        .hero-content {
+            padding: 3rem 0 3.5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #ffd966, #ffb347);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            margin-top: 0.75rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .hero .dates {
+            margin-top: 1.2rem;
+            background: rgba(255,255,240,0.15);
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 60px;
+            backdrop-filter: blur(4px);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+            position: relative;
+            display: inline-block;
+            font-family: 'Roboto Condensed', sans-serif;
+            letter-spacing: -0.3px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--victory-red);
+            border-radius: 4px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.6rem;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.12);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--victory-red);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .badge {
+            background: #f0ede8;
+            padding: 0.25rem 0.9rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: var(--dark-charcoal);
+        }
+
+        .timeline {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .timeline-step {
+            flex: 1;
+            background: white;
+            border-radius: 1rem;
+            padding: 1.3rem;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            border-left: 4px solid var(--victory-gold);
+        }
+
+        .timeline-step .date {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--victory-red);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--victory-red);
+            color: white;
+            font-weight: 700;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            background: #8b1a1a;
+            transform: scale(1.02);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--victory-red);
+            color: var(--victory-red);
+        }
+
+        .btn-outline:hover {
+            background: var(--victory-red);
+            color: white;
+        }
+
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            background: #f9f6ef;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        .info-col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .contact-block {
+            background: #ffffffdb;
+            backdrop-filter: blur(2px);
+        }
+
+        footer {
+            background: #1e2a2a;
+            color: #ddd;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .countdown {
+            background: #2d2e36;
+            color: #ffde9c;
+            padding: 0.5rem 1rem;
+            border-radius: 60px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 780px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .timeline-step {
+                min-width: 140px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <h2></h2>
-  <p>Делаем...</p>
-</body>
 
+<header class="hero">
+    <div class="container hero-content">
+        <h1>История Победы</h1>
+        <div class="subtitle">Городской конкурс компьютерной графики и 3D-моделирования</div>
+        <div class="dates">
+            <i class="fas fa-calendar-alt"></i> 20 апреля – 10 мая 2026 года <br>
+            <span style="font-size: 0.9rem;">Заочный формат · Бесплатное участие</span>
+        </div>
+        <div id="deadlineTimer" class="countdown">
+            <i class="fas fa-hourglass-half"></i> Загрузка таймера...
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Цель и задачи -->
+    <section style="margin-top: 3rem;">
+        <div class="section-title">О конкурсе</div>
+        <div class="info-row" style="background: white; box-shadow: var(--card-shadow);">
+            <div class="info-col">
+                <i class="fas fa-flag-checkered" style="font-size: 2rem; color: var(--victory-red);"></i>
+                <h3 style="margin: 0.5rem 0;">Цель</h3>
+                <p>Формирование чувства патриотизма и любви к Родине у подрастающего поколения через цифровое творчество.</p>
+                <h3 style="margin-top: 1rem;">Задачи</h3>
+                <ul style="padding-left: 1.2rem;">
+                    <li>Воспитание интереса к истории, уважения к ветеранам и героям</li>
+                    <li>Развитие творческих способностей, технической смекалки и пространственного мышления</li>
+                    <li>Выявление и поощрение талантливых школьников и студентов в сфере компьютерной графики и 3D</li>
+                </ul>
+            </div>
+            <div class="info-col">
+                <i class="fas fa-building" style="font-size: 2rem; color: var(--victory-red);"></i>
+                <h3 style="margin: 0.5rem 0;">Организаторы</h3>
+                <p><strong>КГБПОУ «Бийский промышленно-технологический колледж»</strong><br> структурное подразделение «Детский технопарк «Кванториум»</p>
+                <p><strong>Партнёры:</strong><br> МКУ «Управление образования Администрации г. Бийска»<br> АНО ПОО ММКЦТ «Академия ТОП»</p>
+                <p><i class="fas fa-globe"></i> Конкурс открытый, публичный, участие бесплатное.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Номинации -->
+    <section style="margin-top: 2.5rem;">
+        <div class="section-title">Номинации</div>
+        <div class="card-grid">
+            <div class="card">
+                <i class="fas fa-paintbrush"></i>
+                <h3>Плакат</h3>
+                <div class="badge">Графический дизайн</div>
+                <p>Информационная иллюстрация, отражающая историю Победы в Великой Отечественной войне. Работа выполняется в любом графическом редакторе (Photoshop, GIMP, Krita и др.).</p>
+                <p><i class="fas fa-info-circle"></i> Формат: JPG, PNG, разрешение не менее 150 dpi.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-film"></i>
+                <h3>Анимация</h3>
+                <div class="badge">Видеопоздравление</div>
+                <p>Поздравительный анимационный ролик, посвящённый Победе в Великой Отечественной войне.</p>
+                <p><i class="fas fa-clock"></i> Хронометраж: <strong>от 15 до 30 секунд</strong>. Любая техника: 2D, stop-motion, компьютерная анимация.</p>
+                <p>Формат: MP4, H.264, не более 200 МБ.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-cube"></i>
+                <h3>3D модель</h3>
+                <div class="badge">Объёмное моделирование</div>
+                <p>Военная техника времён Великой Отечественной войны, выполненная в любой 3D-программе (Blender, 3ds Max, Maya, Cinema 4D и др.).</p>
+                <p><i class="fas fa-lightbulb"></i> Принимаются рендеры (2–3 ракурса) или файл модели. Техника должна быть узнаваема (Т-34, Ил-2, Катюша и т.д.)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Возрастные категории -->
+    <section style="margin-top: 2rem;">
+        <div class="section-title">Возрастные группы</div>
+        <div class="info-row" style="justify-content: center; text-align: center;">
+            <div class="info-col"><i class="fas fa-child"></i><br><strong>1 группа</strong><br>11 – 13 лет</div>
+            <div class="info-col"><i class="fas fa-users"></i><br><strong>2 группа</strong><br>14 – 16 лет</div>
+            <div class="info-col"><i class="fas fa-user-graduate"></i><br><strong>3 группа</strong><br>17 – 19 лет</div>
+        </div>
+        <p style="background: #f1ede5; padding: 0.8rem; border-radius: 2rem; text-align: center;">
+            🎓 К участию приглашаются школьники, учащиеся учреждений допобразования и студенты СПО.
+        </p>
+    </section>
+
+    <!-- Календарь конкурса -->
+    <section style="margin-top: 2.5rem;">
+        <div class="section-title">Ключевые даты</div>
+        <div class="timeline">
+            <div class="timeline-step">
+                <div class="date">20 апреля – 10 мая 2026</div>
+                <i class="fas fa-upload"></i>
+                <p><strong>Приём заявок и работ</strong><br> через сайт конкурса</p>
+            </div>
+            <div class="timeline-step">
+                <div class="date">11 – 13 мая 2026</div>
+                <i class="fas fa-gavel"></i>
+                <p><strong>Работа жюри</strong><br> оценка, определение победителей</p>
+            </div>
+            <div class="timeline-step">
+                <div class="date">13 мая 2026</div>
+                <i class="fas fa-trophy"></i>
+                <p><strong>Объявление итогов</strong><br> дипломанты и призёры</p>
+            </div>
+        </div>
+        <p style="font-size: 0.9rem; margin-top: -0.5rem;"><i class="fas fa-info-circle"></i> Информация о результатах публикуется в сообществе ВКонтакте и на странице конкурса.</p>
+    </section>
+
+    <!-- Условия участия и правила -->
+    <section style="margin-top: 2rem;">
+        <div class="section-title">Правила участия</div>
+        <div class="card-grid">
+            <div class="card">
+                <i class="fas fa-check-circle"></i>
+                <h3>Как участвовать?</h3>
+                <ol style="margin-left: 1rem;">
+                    <li>Создайте работу в одной из номинаций (Плакат / Анимация / 3D модель).</li>
+                    <li>Заполните заявку и загрузите конкурсный материал на официальной странице конкурса.</li>
+                    <li>Соблюдайте тематику: история Победы в Великой Отечественной войне.</li>
+                    <li>Каждая работа оценивается в своей возрастной категории.</li>
+                </ol>
+                <p style="margin-top: 0.8rem;"><i class="fas fa-envelope"></i> Заявки принимаются <strong>только через сайт</strong>.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-scale-balanced"></i>
+                <h3>Обязанности участников</h3>
+                <p>Соблюдать настоящее Положение, законодательство РФ. Работы не должны нарушать авторские права. Организатор вправе исключить работу при несоответствии условиям.</p>
+                <p><i class="fas fa-camera"></i> Участие в конкурсе означает согласие на публикацию работы и информации об авторе в соцсетях и СМИ с указанием авторства.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-award"></i>
+                <h3>Награждение</h3>
+                <p>Победители и призёры в каждой номинации и возрастной группе награждаются <strong>дипломами 1, 2, 3 степени</strong> и <strong>ценными призами</strong>.</p>
+                <p>Все участники получают электронные сертификаты (после подведения итогов).</p>
+            </div>
+        </div>
+        <div class="info-row" style="background: #eef2f0; margin-top: 0.5rem;">
+            <div><i class="fas fa-gavel"></i> <strong>Оргкомитет и Жюри:</strong> конкурс проводится в соответствии с официальным Положением. Жюри формируется организатором и оценивает работы открытым голосованием по критериям: соответствие теме, техническое мастерство, художественная выразительность, оригинальность.</div>
+        </div>
+    </section>
+
+    <!-- Организационный комитет (из положения) -->
+    <section style="margin-top: 2rem;">
+        <div class="section-title">Оргкомитет</div>
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+            <div class="card" style="text-align: center;"><i class="fas fa-user-tie"></i><h4>Назарова Наталья Анатольевна</h4><p>Зам. руководителя СП «Детский технопарк «Кванториум»</p></div>
+            <div class="card" style="text-align: center;"><i class="fas fa-chalkboard-user"></i><h4>Пупкова Яна Евгеньевна</h4><p>Педагог-организатор</p></div>
+            <div class="card" style="text-align: center;"><i class="fas fa-book-open"></i><h4>Мальцева Евгения Вячеславовна</h4><p>Методист Кванториума</p></div>
+            <div class="card" style="text-align: center;"><i class="fas fa-city"></i><h4>Шилова Марина Валерьевна</h4><p>Главный специалист Управления образования г. Бийска</p></div>
+            <div class="card" style="text-align: center;"><i class="fas fa-laptop-code"></i><h4>Суслова Татьяна Алексеевна</h4><p>Методист АНО ДПО «Компьютерная Академия ТОП»</p></div>
+        </div>
+        <p class="badge" style="background: #e9e2d4;">Общее руководство конкурсом осуществляет Оргкомитет, он же утверждает результаты и организует награждение.</p>
+    </section>
+
+    <!-- Подача заявки / ссылка -->
+    <section style="margin-top: 2.5rem; background: linear-gradient(120deg, #f9f2e0, #fff4e8); border-radius: 2rem; padding: 2rem 1.5rem; text-align: center;">
+        <i class="fas fa-pen-alt" style="font-size: 2.5rem; color: var(--victory-red);"></i>
+        <h2 style="margin: 0.5rem 0;">Подать заявку на конкурс</h2>
+        <p style="max-width: 650px; margin: 0 auto 1.5rem;">Все заявки и конкурсные работы принимаются <strong>только через официальную страницу конкурса</strong>. Убедитесь, что ваша работа соответствует выбранной номинации и возрастной группе.</p>
+        <a href="https://kvant22.github.io/" target="_blank" class="btn" style="font-size: 1.2rem; padding: 1rem 2.5rem;"><i class="fas fa-arrow-right"></i> Перейти к подаче заявки →</a>
+        <div style="margin-top: 1rem; font-size: 0.9rem;">Срок приёма: <strong>20 апреля – 10 мая 2026</strong> (включительно)</div>
+    </section>
+
+    <!-- Контакты и место проведения -->
+    <section style="margin-top: 2rem;">
+        <div class="section-title">Контакты и место проведения</div>
+        <div class="info-row" style="align-items: center;">
+            <div class="info-col">
+                <i class="fas fa-map-marker-alt"></i> <strong>Адрес:</strong><br>
+                Алтайский край, г. Бийск, ул. Горно-Алтайская, 60<br>
+                КГБПОУ «Бийский промышленно-технологический колледж»,<br> СП «Детский технопарк «Кванториум»
+            </div>
+            <div class="info-col">
+                <i class="fas fa-phone-alt"></i> <strong>Телефон:</strong><br>
+                <a href="tel:+79646006362" style="color: inherit;">8-964-600-6362</a><br>
+                <i class="fab fa-vk"></i> <strong>Сообщество ВКонтакте:</strong><br>
+                <a href="https://vk.com/kvantorium_biysk" target="_blank" style="color: var(--victory-red);">vk.com/kvantorium_biysk</a><br>
+                <i class="fas fa-globe"></i> <strong>Страница конкурса:</strong><br>
+                <a href="https://kvant22.github.io/" target="_blank">https://kvant22.github.io/</a>
+            </div>
+            <div class="info-col">
+                <i class="fas fa-envelope"></i> <strong>По вопросам участия:</strong><br> обращайтесь в сообщество ВК или по указанному телефону в рабочее время.
+            </div>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.85rem; text-align: center;">* Организатор оставляет за собой право использовать конкурсные работы в некоммерческих целях с указанием авторства.</p>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Организаторы: КГБПОУ «Бийский промышленно-технологический колледж» — Детский технопарк «Кванториум»<br>
+        При поддержке МКУ «Управление образования Администрации г. Бийска» и АНО ПОО «Академия ТОП»</p>
+        <p style="margin-top: 0.6rem;"><i class="fas fa-star-of-life"></i> Городской конкурс компьютерной графики и 3D-моделирования «История Победы» — сохраняем память вместе!</p>
+    </div>
+</footer>
+
+<script>
+    // Таймер до окончания приёма заявок (10 мая 2026 23:59:59 местное время)
+    function updateCountdown() {
+        const deadline = new Date(2026, 4, 10, 23, 59, 59); // 10 мая 2026 (месяц 4 = май)
+        const now = new Date();
+        const diff = deadline - now;
+
+        const timerEl = document.getElementById('deadlineTimer');
+        if (!timerEl) return;
+
+        if (diff <= 0) {
+            timerEl.innerHTML = '<i class="fas fa-check-circle"></i> Приём заявок завершён. Следите за итогами!';
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (86400000)) / (3600000));
+        const minutes = Math.floor((diff % 3600000) / 60000);
+        const seconds = Math.floor((diff % 60000) / 1000);
+
+        timerEl.innerHTML = `<i class="fas fa-hourglass-half"></i> До окончания приёма: ${days} дн. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // добавим дополнительный плавный скролл для ссылок, если понадобится
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== "#" && href.length > 1) {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+</script>
+</body>
 </html>
